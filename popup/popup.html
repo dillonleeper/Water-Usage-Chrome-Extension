@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Usage Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-icon">💧</div>
+      <h1 class="header-title">Water Usage Tracker</h1>
+      <p class="header-subtitle">Your Digital Water Footprint</p>
+    </header>
+
+    <!-- Main Stats -->
+    <div class="stats-container">
+      <div class="stat-card primary">
+        <div class="stat-icon">🌊</div>
+        <div class="stat-content">
+          <div class="stat-value" id="totalWater">0.00</div>
+          <div class="stat-label">Gallons Used</div>
+        </div>
+      </div>
+
+      <div class="stat-card secondary">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-content">
+          <div class="stat-value" id="totalEnergy">0.000</div>
+          <div class="stat-label">kWh Consumed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison -->
+    <div class="comparison-card">
+      <div class="comparison-icon">🚰</div>
+      <div class="comparison-text">
+        <span class="comparison-value" id="comparisonText">That's like...</span>
+      </div>
+    </div>
+
+    <!-- Activity Breakdown -->
+    <div class="section">
+      <h2 class="section-title">Activity Breakdown</h2>
+      <div class="activity-list" id="activityList">
+        <div class="empty-state">
+          <div class="empty-icon">📊</div>
+          <p>Start browsing to see your water usage!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Session Info -->
+    <div class="session-info">
+      <div class="session-item">
+        <span class="session-label">Session Started:</span>
+        <span class="session-value" id="sessionStart">Just now</span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button class="btn btn-secondary" id="exportBtn">
+        <span class="btn-icon">📥</span>
+        Export Data
+      </button>
+      <button class="btn btn-danger" id="resetBtn">
+        <span class="btn-icon">🔄</span>
+        Reset
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">💡 Tip: AI queries use ~10x more water than regular searches</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
